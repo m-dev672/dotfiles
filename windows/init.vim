@@ -2,6 +2,7 @@ call plug#begin('$LOCALAPPDATA\nvim-data\site\autoload')
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'lambdalisue/fern.vim'
 Plug 'dense-analysis/ale'
 call plug#end()
 
@@ -34,3 +35,4 @@ highlight link GruvboxAquaSign GruvboxAqua
 highlight link GruvboxOrangeSign GruvboxOrange
 
 autocmd BufRead,CursorMoved,CursorMovedI * let &numberwidth=len(line("$"))+2
+autocmd VimEnter * ++nested Fern . -drawer -stay -toggle -reveal=%
