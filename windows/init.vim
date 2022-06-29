@@ -34,5 +34,5 @@ highlight link GruvboxPurpleSign GruvboxPurple
 highlight link GruvboxAquaSign GruvboxAqua
 highlight link GruvboxOrangeSign GruvboxOrange
 
-autocmd BufRead,CursorMoved,CursorMovedI * let &numberwidth=len(line("$"))+2
-autocmd VimEnter * ++nested Fern . -drawer -stay -toggle -reveal=%
+autocmd BufNewFile,BufRead,CursorMoved,CursorMovedI * let &numberwidth=len(line("$"))+2
+autocmd VimEnter * ++nested Fern . -drawer -toggle -reveal=%
